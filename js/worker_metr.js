@@ -1,0 +1,3 @@
+importScripts("worker_msg.js");
+var metronomeTicker={tickIntervalID:null,ticksPerSecond:30,msgEnum:msgActionEnum.metr,tick:function(){var a=new workerMsg(this.msgEnum.tick);postMessage(a)},start:function(){this.tickIntervalID=setInterval(this.tick.bind(this),1E3/this.ticksPerSecond)},stop:function(){void 0!=this.tickIntervalID&&clearInterval(this.tickIntervalID)},tickrate:function(){var a=new workerMsg(this.msgEnum.tickrate,this.ticksPerSecond);postMessage(a)},onmessage:function(a){switch(a.data.action){case this.msgEnum.startTicking:this.start();break;
+case this.msgEnum.stopTicking:this.stop();break;case this.msgEnum.getTickrate:this.tickrate()}}};onmessage=metronomeTicker.onmessage.bind(metronomeTicker);

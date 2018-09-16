@@ -1,1 +1,0 @@
-var metronome={tickIntervalID:null,tick:function(){postMessage("metronomeTick")},start:function(){this.tickIntervalID=setInterval(this.tick,1E3/60)},stop:function(){void 0!=this.tickIntervalID&&clearInterval(this.tickIntervalID)}};onmessage=function(a){switch(a.data){case "startMetronomeTicking":metronome.start();break;case "stopMetronomeTicking":metronome.stop()}};
