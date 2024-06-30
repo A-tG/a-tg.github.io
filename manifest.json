@@ -1,0 +1,22 @@
+{
+  "name": "A-t Guitar",
+  "short_name": "A-tGuitar",
+  "start_url": ".",
+  "scope": "/",
+  "display": "standalone",
+  "backgroundcolor": "#333",
+  "theme_color": "#ffffff",
+  "description": "Guitar scales and more",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x1512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
